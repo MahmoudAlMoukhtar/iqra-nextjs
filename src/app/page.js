@@ -8,6 +8,9 @@ import CustomizedAccordions from "./FAQ/FAQ";
 import ContactPage from "./Contact/Contact";
 import * as api from "../api/index.js";
 import {use} from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 
 // export const getServerSideProps = async () => {
 //   try {
@@ -60,7 +63,6 @@ export const getTestimoials = async () => {
 };
 
 const Home = () => {
-  console.log("Home");
   const courses = use(getCourses());
   const blogs = use(getBlogs());
   const testimoials = use(getTestimoials());
@@ -74,6 +76,7 @@ const Home = () => {
       <Testimonials testimoials={testimoials} />
       <ContactPage />
       <CustomizedAccordions />
+      <ToastContainer />
     </div>
   );
 };

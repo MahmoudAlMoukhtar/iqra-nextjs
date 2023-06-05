@@ -19,6 +19,7 @@ const BlogsSection = ({blogs: blogsData}) => {
   // }, []);
 
   // if (loading) return <div></div>;
+  //console.log(blogsData);
   if (blogsData.length !== 0) {
     return (
       <section
@@ -27,7 +28,7 @@ const BlogsSection = ({blogs: blogsData}) => {
       >
         <div className="flex flex-col items-center gap-2">
           <h2 className="text-3xl sm:text-4xl font-bold text-center">
-            {t("titleblogs")}
+            Our Blogs
           </h2>
           <span className="h-1 sm:h-2 w-40 bg-[#ffc265]" />
         </div>
@@ -36,10 +37,10 @@ const BlogsSection = ({blogs: blogsData}) => {
           {blogsData.map(b => <BlogItem b={b} key={b._id} />).slice(0, 3)}
         </div>
         <Link
-          to="/blogs"
+          href="/blogs"
           className="flex gap-2 items-center bg-[#fd5308] rounded-full py-4 px-8 font-bold"
         >
-          {t("titleblogs")}
+          All Blogs
         </Link>
       </section>
     );
@@ -49,3 +50,4 @@ const BlogsSection = ({blogs: blogsData}) => {
 };
 
 export default BlogsSection;
+/* {blogsData.map(b => <BlogItem b={b} key={b._id} />).slice(0, 3)} */

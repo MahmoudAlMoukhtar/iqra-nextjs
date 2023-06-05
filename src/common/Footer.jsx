@@ -1,6 +1,6 @@
 "use client";
 import {useState} from "react";
-import {Trans} from "react-i18next/TransWithoutContext";
+//import {Trans} from "react-i18next/TransWithoutContext";
 // import {languages} from "../app/i18n/settings.js";
 // import {useTranslation} from "../app/i18n";
 import Link from "next/link.js";
