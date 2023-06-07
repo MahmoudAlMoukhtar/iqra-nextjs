@@ -1,7 +1,24 @@
-import Course from "../../components/Course";
+"use client";
+import {useEffect, useState} from "react";
+import Course from "../../components/Course/Course";
 import Image from "next/image";
-
-const Courses = ({courses}) => {
+import * as api from "../../api";
+const Courses = () => {
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await api.fetchCourses();
+        setCourses(res.data);
+      } catch (error) {
+        console.log(
+          "erro in fetch courses from Course Component, error message=>",
+          error.message
+        );
+      }
+    };
+    makeRequest();
+  }, []);
   return (
     <section
       id="courses"

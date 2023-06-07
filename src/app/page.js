@@ -9,8 +9,7 @@ import ContactPage from "./Contact/Contact";
 import * as api from "../api/index.js";
 import {use} from "react";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
-
+import {ToastContainer} from "react-toastify";
 
 // export const getServerSideProps = async () => {
 //   try {

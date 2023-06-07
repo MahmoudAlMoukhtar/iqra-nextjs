@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+//import {useRouter} from "next/router";
 
 const Course = ({course}) => {
   const language = "en";
+  //const router = useRouter();
   const itemVariants = {
     hidden: {y: 50, opacity: 0},
     visible: {y: 0, opacity: 1},
@@ -10,8 +13,8 @@ const Course = ({course}) => {
 
   return (
     <Link
-      key={course._id}
       href={`/courses/${course._id}`}
+      key={course._id}
       variants={itemVariants}
       className="item flex flex-col items-center justify-between hover:text-black transition duration-200 w-40 sm:w-60 text-center h-[150px] sm:h-[200px] bg-[#fd5308] rounded-t-full pt-4 cursor-pointer hover:translate-y-[-10px] mb-10"
     >
